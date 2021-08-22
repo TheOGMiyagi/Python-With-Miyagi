@@ -12,6 +12,21 @@ class Room():
         self.width = int(Width)
         self.height = int(Height)
         self.shape = Shape
+	def __repr__(self):
+		_output = ""
+		_output += f"Docstring: \n{self.__doc__}\n\n"
+		_output += f"Class: \n{self.__class__}\n\n"
+		_output += f"Dict: \n{self.__dict__}\n\n"
+		return _output
+	def __str__(self):
+		_output = ""
+		_output += f"Docstring: \n{self.__doc__}\n\n"
+		_output += f"Length: \n{self.length}\n"
+		_output += f"Width: \n{self.width}\n"
+		_output += f"Height: \n{self.height}\n\n"
+		_output += f"Area: \n{self.area}\n"
+		_output += f"Volume: \n{self.volume}"
+		return _output
     # PROPERTIES
     @property
     def area(self):
